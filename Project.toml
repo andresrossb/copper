@@ -1,0 +1,11 @@
+[deps]
+ACE = "3e8ccfd2-c8b0-11ea-32f1-f3a5990fd77a"
+ACEflux = "98e0f63a-1ed7-4701-8c83-944c20c93b0d"
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+IPFitting = "3002bd4c-79e4-52ce-b924-91256dde4e52"
+JLD = "4138dd39-2aa7-5051-a626-17a0bb65d9c8"
+JuLIP = "945c410c-986d-556a-acb1-167a618e0462"
+LineSearches = "d3d80556-e9d4-5f37-9878-2ab0fcc64255"
+Optim = "429524aa-4258-5aef-a3af-852621145aeb"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
