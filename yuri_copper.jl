@@ -14,7 +14,7 @@ Distributed.addprocs(70)
 @show nprocs()
 
 #import packages
-@everywhere using JuLIP, ACEflux, Zygote, Flux, IPFitting, ACE, StaticArrays # LinearAlgebra, RecipesBase, 
+@everywhere using JuLIP, Zygote, Flux, IPFitting, ACE, StaticArrays, ACEflux # LinearAlgebra, RecipesBase, 
 using Optim, LineSearches, JLD#, TensorBoardLogger, Logging
 @everywhere import Base.copyto!
 
@@ -47,8 +47,7 @@ target = deepcopy(collect(Iterators.flatten(Flux.params(model)[1])))
 # # ------------------------------------------------------------------------
 
 #import and take only the data we need
-all_Si = IPFitting.Data.read_xyz("/zfs/users/aross88/aross88/copper/Si.xyz", energy_key="dft_energy", force_key="dft_force")
-data = filter(at -> configtype(at) == "dia", all_Si) #get diamon configurations
+data = IPFitting.Data.read_xyz("/zfs/users/aross88/aross88/copper/Si.xyz", energy_key="dft_energy", force_key="dft_force")
 
 begin 
    Y = []  
